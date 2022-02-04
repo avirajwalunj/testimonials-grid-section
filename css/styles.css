@@ -1,0 +1,150 @@
+:root{
+  /* Primary */
+
+  --Moderate-violet: hsl(263, 55%, 52%) ;
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%) ;
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%) ;
+  --White: hsl(0, 0%, 100%) ;
+
+  /* Neutral */
+
+  --Light-gray: hsl(0, 0%, 81%) ;
+  --Light-grayish-blue: hsl(210, 46%, 95%) ;
+
+  /* Body Copy */
+
+  --Font-size: 13px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: var(--Light-grayish-blue);
+  font-size: 13px;
+  display: flex;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+h1{
+  font-size: 14px;
+}
+h2{
+  font-size: 13px;
+  opacity: 0.5;
+}
+h3{
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 25px;
+  font-weight: 600;
+}
+p{
+  font-size: 13px;
+  opacity: 0.5;
+  line-height: 20px;
+  font-weight: 500;
+}
+img{
+  border-radius: 100%;
+  border-color: hsl(263, 55%, 70%);
+  border-width: 10px;
+  margin-right: 10px;
+  width: 6%;
+
+}
+.quottion{
+  width: 110px;
+  position: absolute;
+  top: 1%;
+  right: 10%;
+  z-index: 1;
+}
+.below-quote{
+  position: relative;
+  z-index: 2;
+}
+.patricks-img{
+  width: 13%;
+}
+.container{
+  padding: 7% 8% 3%;
+  display: grid;
+  grid-template-columns: [first] 2fr [line2] 2fr [line3] 2fr [col4-start] 2fr [end] ;
+  grid-template-rows: [row1-start] 38% [row1-end] 10% [third-line] 48% [last-line];
+  grid-gap: 30px;
+}
+.colored-bg{
+  justify-self: start;
+  border-radius: 10px;
+  padding: 25px 25px 0px;
+  color: hsl(0, 0%, 81%);
+}
+.white-bg{
+  justify-self: start;
+  border-radius: 10px;
+  padding: 25px 25px 0px;
+  color: hsl(219, 29%, 28%);
+}
+.first-testimonial{
+  grid-column-start: first;
+  grid-column-end: line3;
+  grid-row-start: row1-start;
+  grid-row-end: third-line ;
+  background-color: var(--Moderate-violet);
+  position: relative;
+}
+
+.second-testi{
+  grid-column-start: line3;
+  grid-column-end: col4-start;
+  grid-row-start: row1-start;
+  grid-row-end: third-line ;
+  background-color: var(--Very-dark-grayish-blue);
+
+}
+
+.third-testi{
+  grid-column-start: col4-start;
+  grid-column-end: end;
+  grid-row-start: row1-start;
+  grid-row-end: last-line ;
+  background-color: var(--White);
+
+
+}
+.fourth-testi{
+  grid-column-start: first;
+  grid-column-end: line2;
+  grid-row-start: third-line;
+  grid-row-end: last-line ;
+  background-color:var(--White) ;
+
+}
+
+.fifth-testi{
+  grid-column-start: line2;
+  grid-column-end: col4-start;
+  grid-row-start: third-line;
+  grid-row-end: last-line ;
+  background-color: var(--Very-dark-blackish-blue);
+
+}
+.name-tag{
+  display: flex;
+  font-size: 10px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+@media only screen and (max-width:425px)  {
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+}
